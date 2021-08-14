@@ -74,7 +74,7 @@ a[href]::selection {
 
 @media (hover: hover) {
   a[href]:hover {
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
   }
 }
 
