@@ -4,6 +4,7 @@
   "description": "Pavel Pomerantsev's personal website",
   "main": "index.js",
   "scripts": {
+    "build": "./scripts/renderTemplates.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
