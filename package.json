@@ -1,0 +1,22 @@
+{
+  "name": "pavelpomerantsev.com",
+  "version": "1.0.0",
+  "description": "Pavel Pomerantsev's personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pomerantsev/pavelpomerantsev.com.git"
+  },
+  "author": "Pavel Pomerantsev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pomerantsev/pavelpomerantsev.com/issues"
+  },
+  "homepage": "https://github.com/pomerantsev/pavelpomerantsev.com#readme",
+  "dependencies": {
+    "nunjucks": "^3.2.3"
+  }
+}
