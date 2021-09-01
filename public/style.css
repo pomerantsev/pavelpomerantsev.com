@@ -28,6 +28,7 @@ p {
   --s1: calc(var(--s0) * var(--ratio));
   --s2: calc(var(--s1) * var(--ratio));
   --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
 
   /* Color constants */
   --black: #1c2334;
@@ -98,6 +99,26 @@ h1 {
 
 h2 {
   font-size: var(--s2);
+}
+
+p,
+li {
+  font-size: var(--s0);
+}
+
+@media (min-width: 45em) {
+  h1 {
+    font-size: var(--s4);
+  }
+
+  h2 {
+    font-size: var(--s3);
+  }
+
+  p,
+  li {
+    font-size: var(--s1);
+  }
 }
 
 main > * + * {
