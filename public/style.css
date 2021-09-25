@@ -40,6 +40,9 @@ p {
   --text-color: var(--black);
   --link-color: var(--dark-blue);
   --selected-link-color: var(--light-blue);
+
+  /* Other constants */
+ --hover-text-decoration-thickness: 2px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,7 +78,7 @@ a[href]::selection {
 
 @media (hover: hover) {
   a[href]:hover {
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: var(--hover-text-decoration-thickness);
   }
 }
 
@@ -107,6 +110,10 @@ li {
 }
 
 @media (min-width: 45em) {
+  :root {
+    --hover-text-decoration-thickness: 3px;
+  }
+
   h1 {
     font-size: var(--s4);
   }
