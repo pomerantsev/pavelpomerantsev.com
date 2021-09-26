@@ -137,6 +137,14 @@ li {
   max-width: 60ch;
 }
 
+img.hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Just one of the values picked from the actual image's background */
+  background-color: #a0383a;
+}
+
 h1 {
   max-width: 15ch;
 }
