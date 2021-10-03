@@ -139,7 +139,8 @@ li {
 
 img.hero {
   display: block;
-  width: 100%;
+  /* Width should be kept in sync with the sizes attr */
+  width: min(40ch, 100%);
   height: auto;
   /* Just one of the values picked from the actual image's background */
   background-color: #a0383a;
