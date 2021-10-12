@@ -236,6 +236,10 @@ I’ve done it since I want to have a custom 404 page as well
 (not a default Netlify one),
 and I don’t want duplicate header contents in the source.
 
+**Note:** to make it potentially simpler to introduce a directory hierarchy for HTML files in the future,
+I make sure that paths for all resources are absolute (`/path/to/file`),
+not relative (`path/to/file`).
+
 
 ### Build process and previewing
 
@@ -249,9 +253,10 @@ so the script has to be run manually on each HTML change.
 As of now, if additional HTML files are introduced,
 they need to be manually added to the build script.
 
-To preview the results,
-I simply open the relevant HTML file in a browser.
-There’s no development server yet.
+To preview the results, I use http-server.
+It’s started with `npm run start`,
+a script that should run in a separate terminal window.
+The website is then available at [http://localhost:8080](http://localhost:8080).
 
 
 ### Code versioning and hosting

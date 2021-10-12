@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./scripts/renderTemplates.js",
+    "start": "http-server -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/pomerantsev/pavelpomerantsev.com#readme",
   "devDependencies": {
+    "http-server": "^13.0.2",
     "nunjucks": "^3.2.3"
   }
 }
