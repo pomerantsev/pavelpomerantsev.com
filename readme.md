@@ -236,6 +236,10 @@ I’ve done it since I want to have a custom 404 page as well
 (not a default Netlify one),
 and I don’t want duplicate header contents in the source.
 
+**Note:** to make it potentially simpler to introduce a directory hierarchy for HTML files in the future,
+I make sure that paths for all resources are absolute (`/path/to/file`),
+not relative (`path/to/file`).
+
 
 ### Build process and previewing
 
