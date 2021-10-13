@@ -192,18 +192,21 @@ I should treat JavaScript as an enhancement rather than as a dependency because
 
 ### Favicons
 
-I’ve used [an article on favicons by Andrey Sitnik](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
-to make decisions here.
+~~I’ve used [an article on favicons by Andrey Sitnik](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
+to make decisions here.~~
 I ended up doing the following.
 
 * 16px, 32px, and 48px icons are included as `<link rel="icon">` in HTML `<head>`.
-* A separate `<link rel="apple-touch-icon">` is included there as well.
-  I’m unsure why Andrey recommended to add padding around a 140px icon to make it 180px.
-  * To add the padding,
-    I [used Imagemagick](https://stackoverflow.com/questions/1787356/use-imagemagick-to-place-an-image-inside-a-larger-canvas).
-* 192px and 512px icons are referenced in manifest.json
+* ~~A separate `<link rel="apple-touch-icon">` is included there as well.
+  I’m unsure why Andrey recommended to add padding around a 140px icon to make it 180px.~~
+  * ~~To add the padding,
+    I [used Imagemagick](https://stackoverflow.com/questions/1787356/use-imagemagick-to-place-an-image-inside-a-larger-canvas).~~
+* ~~192px and 512px icons are referenced in manifest.json
   (in turn referenced in `<head>`).
-  It’s supposedly for Android, but I haven’t tested these icons yet.
+  It’s supposedly for Android, but I haven’t tested these icons yet.~~
+* I eventually got rid of all non-standard icons (web-manifest and Apple ones).
+  I don’t think I need the website to be installable,
+  so the maintenance cost doesn’t seem to be worth it.
 
 The photo original for the favicons can be found
 in [Google Drive](https://drive.google.com/drive/folders/1R2q4aonoCpUIoUsHCgN6aKqODDFW6wQ5?usp=sharing).
