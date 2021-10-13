@@ -130,11 +130,6 @@ and no functionality should be lost.
     and it means that we don’t need any special styles
     for the [forced-colors mode](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors)
     since outlines are visible there by default.
-* [Logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties)
-  * There is no real need to use logical dimensions
-    instead of physical ones (such as `margin-inline-start` instead of `margin-left`),
-    so logical properties are simply there in the spirit of modern CSS.
-    And who knows, maybe I’ll have to translate the site to Hebrew or Arabic one day :)
 
 
 ### Images
