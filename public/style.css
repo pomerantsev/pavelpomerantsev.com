@@ -31,6 +31,7 @@ p {
   --s4: calc(var(--s3) * var(--ratio));
 
   /* Color constants */
+  /* The --black value should stay in sync with the theme color in the HTML <meta name="theme-color"> */
   --black: #1c2334;
   --dark-blue: #046b99;
   --light-blue: #00cfff;
