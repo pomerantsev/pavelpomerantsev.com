@@ -12,6 +12,7 @@
   * [Behavior / JavaScript](#behavior--javascript)
   * [Favicons](#favicons)
 * [SEO (search engine optimization)](#seo-search-engine-optimization)
+* [Security](#security)
 * [Development](#development)
   * [File organization](#file-organization)
   * [Build process and previewing](#build-process-and-previewing)
@@ -211,6 +212,16 @@ in [Google Drive](https://drive.google.com/drive/folders/1R2q4aonoCpUIoUsHCgN6aK
 
 A simple robots.txt file has been added to allow all user agents to access all content.
 Nothing else has been done specifically for SEO.
+
+
+## Security
+
+The site does not have user-generated content,
+so there may be no vulnerabilities to exploit through the web interface,
+however [WebPageTest](https://www.webpagetest.org/) suggested some sensible headers
+to be included in the responses,
+so those are all specified in /public/_headers,
+per [Netlify’s custom headers docs](https://docs.netlify.com/routing/headers/).
 
 
 ## Development
