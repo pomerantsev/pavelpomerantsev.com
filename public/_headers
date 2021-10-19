@@ -1,0 +1,26 @@
+/*
+  # Protection from MIME sniffing: https://www.keycdn.com/support/what-is-mime-sniffing#how-to-avoid-mime-sniffing-vulnerabilities
+  # This may only be useful in the future: we don't load any user-submitted data on the site,
+  # so MIME-sniffing vulnerabilities probably cannot be exploited.
+  X-Content-Type-Options: nosniff
+
+  # We're using directives from the CSP 2 standard.
+  # This version is not supported by IE11,
+  # but we probably shouldn't be worried about that.
+  #
+  # frame-ancestors 'none' is protecting against clickjacking:
+  # https://owasp.org/www-community/attacks/Clickjacking
+  # We don't have any controls on the site that change state,
+  # so we're probably not prone to such attacks, but it doesn't hurt
+  # to have a restrictive policy anyway.
+  #
+  # default-src 'self' is protection against XSS attacks among other things, potentially.
+  # It currently disallows any kinds of resources except same-origin ones,
+  # including any inline CSS or scripts.
+  # See more about XSS attacks and about how CSP helps against them:
+  # https://excess-xss.com/
+  Content-Security-Policy: frame-ancestors 'none'; default-src 'self';
+
+  # X-Frame-Options and X-XSS-Protection are the other two headers suggested by WebPageTest,
+  # but they're superseded by Content Security Policy anyway, and I'm not expecting any traffic
+  # from non-modern browsers anyway, so adding those seems like a wasted bytes down the wire.
