@@ -138,9 +138,7 @@ and no functionality should be lost.
 Images are a special kind of content where HTML and CSS sometimes have to be considered in tandem.
 
 To ensure that content images look good and are loaded in a performant way,
-I’m following the guidance from [Image Optimization by Addy Osmani](https://www.smashingmagazine.com/printed-books/image-optimization/).
-I haven’t looked beyond the second chapter,
-so I may make further optimizations in the future.
+I’m generally following the guidance from [Image Optimization by Addy Osmani](https://www.smashingmagazine.com/printed-books/image-optimization/).
 
 **Note:** I only have one image at the moment,
 so if I have more, some of the below may change.
@@ -163,13 +161,24 @@ so if I have more, some of the below may change.
     * This requires me to maintain sizes both in CSS and in HTML.
       Unfortunately, it’s done manually at the moment.
     * The set of image sizes has been selected quite randomly.
-      I should possibly come up with a more consistent process for that.
+      I probably chose reasonable minimum and maximum sizes,
+      based approximately on what size the image can have in CSS pixels,
+      and generated all in-between sizes, with a reasonable step.
+      I may have overengineered this.
+      If I have to add more images in the future,
+      and the approach turns out to be unwieldy,
+      I may think of something else.
     * Values in the sizes attribute are approximate,
       but they have been calculated through actual breakpoints
       (at what viewport width content width changes),
       and then divided by 16 (value of 1 rem on my dev machine).
 * Asset optimization
   * To optimize image assets, I've used [squoosh.app](https://squoosh.app/).
+    The quality setting on all sizes is 70,
+    it seemed to look fine on all resolutions,
+    although a better understanding of SSIM (Structural Similarity Index)
+    and a comparison of different image qualities before picking one
+    would have been beneficial.
 * Other visual considerations
   * As an enhancement, the hero image has a background color
     as a simple placeholder while the image is loading.
