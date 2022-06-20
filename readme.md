@@ -237,11 +237,8 @@ per [Netlify’s custom headers docs](https://docs.netlify.com/routing/headers/)
 
 ### File organization
 
-All I have code for now is public assets (the /public folder).
-HTML files are the only ones that require a build step,
-so the source for those lives in /src.
-CSS, images, favicons, and the rest don’t involve a build step,
-so their source is in /public.
+Code that requires a build step (currently HTML and CSS) lives in /src.
+Public assets live in /public.
 
 I use [nunjucks](https://mozilla.github.io/nunjucks/) as a template compiler.
 There has been no big reason to choose this templating language / compiler
@@ -253,6 +250,10 @@ and to add a third-party dependency.
 I’ve done it since I want to have a custom 404 page as well
 (not a default Netlify one),
 and I don’t want duplicate header contents in the source.
+
+CSS is minified using PostCSS + CSSNano, then inlined.
+People recommend inlining to save a server roundtrip,
+and it doesn't seem to add much development overhead.
 
 **Note:** to make it potentially simpler to introduce a directory hierarchy for HTML files in the future,
 I make sure that paths for all resources are absolute (`/path/to/file`),

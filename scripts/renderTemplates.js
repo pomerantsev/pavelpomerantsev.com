@@ -2,12 +2,22 @@
 
 const fs = require('fs/promises');
 const nunjucks = require('nunjucks');
+const postcss = require('postcss');
+const cssnano = require('cssnano');
 
-const renderTemplate = async (fileName) => {
-  await fs.writeFile(`public/${fileName}`, nunjucks.render(`src/${fileName}`));
+const processStyle = async () => {
+  const rawStyle = await fs.readFile('src/style.css');
+  const processedStyle = (await postcss([cssnano({preset: 'default'})]).process(rawStyle, {from: undefined})).css;
+  return processedStyle;
 };
 
-Promise.all([
-  renderTemplate('index.html'),
-  renderTemplate('404.html'),
-]);
+const renderTemplate = async (fileName, style) => {
+  await fs.writeFile(`public/${fileName}`, nunjucks.render(`src/${fileName}`, {style}));
+};
+
+processStyle().then(style =>
+  Promise.all([
+    renderTemplate('index.html', style),
+    renderTemplate('404.html', style),
+  ])
+);

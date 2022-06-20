@@ -18,7 +18,9 @@
        It should be synced with the CSS --black value. #}
     <meta name="theme-color" content="#1c2334">
 
-    <link rel="stylesheet" href="/style.css">
+    <style>
+      {{ style }}
+    </style>
   </head>
   <body>
     {% block content %}{% endblock %}
