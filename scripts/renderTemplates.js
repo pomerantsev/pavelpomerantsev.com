@@ -6,7 +6,7 @@ const postcss = require('postcss');
 const cssnano = require('cssnano');
 
 const processStyle = async () => {
-  const rawStyle = await fs.readFile('src/style.css');
+  const rawStyle = await fs.readFile('src/style.css', 'utf-8');
   const processedStyle = (await postcss([cssnano({preset: 'default'})]).process(rawStyle, {from: undefined})).css;
   return processedStyle;
 };
