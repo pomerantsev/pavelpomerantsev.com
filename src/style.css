@@ -25,6 +25,23 @@ body {
 
 
 
+/* Utilities */
+
+/* https://piccalil.li/blog/visually-hidden/ */
+.visually-hidden {
+  block-size: auto;
+  border: 0;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+}
+
+
+
 /* Font sizes */
 
 :root {

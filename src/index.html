@@ -5,104 +5,102 @@
 {% set description = "Pavel Pomerantsev’s personal website" %}
 
 {% block content %}
-  <main>
-    <h1>Pavel Pomerantsev</h1>
+  <h1 class="visually-hidden">Pavel Pomerantsev</h1>
 
-    <p>
-      <img
-        class="hero"
-        src="/images/pavel-600.jpg"
-        srcset="
-          /images/pavel-600.jpg 600w,
-          /images/pavel-900.jpg 900w,
-          /images/pavel-1200.jpg 1200w,
-          /images/pavel-1500.jpg 1500w,
-          /images/pavel-1800.jpg 1800w
-        "
-        {# Sizes are manually calculated. These values should be kept in sync with CSS #}
-        sizes="
-          (min-width: 44em) 33em,
-          (min-width: 30em) 25em,
-          85vw
-        "
-        alt="Pavel in front of a red wooden gate, wearing a dark green t-shirt, slightly smiling"
-        width="600"
-        height="400"
-        decoding="async"
-      >
-    </p>
+  <p>
+    <img
+      class="hero"
+      src="/images/pavel-600.jpg"
+      srcset="
+        /images/pavel-600.jpg 600w,
+        /images/pavel-900.jpg 900w,
+        /images/pavel-1200.jpg 1200w,
+        /images/pavel-1500.jpg 1500w,
+        /images/pavel-1800.jpg 1800w
+      "
+      {# Sizes are manually calculated. These values should be kept in sync with CSS #}
+      sizes="
+        (min-width: 44em) 33em,
+        (min-width: 30em) 25em,
+        85vw
+      "
+      alt="Pavel in front of a red wooden gate, wearing a dark green t-shirt, slightly smiling"
+      width="600"
+      height="400"
+      decoding="async"
+    >
+  </p>
 
-    <h2 id="work">
-      <span class="header-content">Work</span>
-    </h2>
+  <h2 id="work">
+    <span class="header-content">Work</span>
+  </h2>
 
-    <p>
-      I’m a web developer, mostly focused on UX and accessibility.
-      I’ve been building for the Web since 2013,
-      working at startups and large companies such as Samsung and Squarespace.
-    </p>
+  <p>
+    I’m a web developer, mostly focused on UX and accessibility.
+    I’ve been building for the Web since 2013,
+    working at startups and large companies such as Samsung and Squarespace.
+  </p>
 
-    <p>
-      I’m excited about simple solutions that work well regardless of the user’s abilities, circumstances, and preferences.
-    </p>
+  <p>
+    I’m excited about simple solutions that work well regardless of the user’s abilities, circumstances, and preferences.
+  </p>
 
-    <p>
-      I stick to core Web technologies (such as HTML, CSS, and JavaScript) whenever I can.
-    </p>
+  <p>
+    I stick to core Web technologies (such as HTML, CSS, and JavaScript) whenever I can.
+  </p>
 
-    <h2 id="speaking">
-      <span class="header-content">Speaking</span>
-    </h2>
+  <h2 id="speaking">
+    <span class="header-content">Speaking</span>
+  </h2>
 
-    <ul>
-      <li>
-        19 May 2022, Virtua11y conference.
-        <a href="https://www.youtube.com/watch?v=anvTnMizhVU">The Accessible Organisation: The success and challenges of creating a culture of accessibility</a>
-        (roundtable)
-      </li>
-    </ul>
+  <ul>
+    <li>
+      19 May 2022, Virtua11y conference.
+      <a href="https://www.youtube.com/watch?v=anvTnMizhVU">The Accessible Organisation: The success and challenges of creating a culture of accessibility</a>
+      (roundtable)
+    </li>
+  </ul>
 
-    <h2 id="writing">
-      <span class="header-content">Writing</span>
-    </h2>
+  <h2 id="writing">
+    <span class="header-content">Writing</span>
+  </h2>
 
-    <ul>
-      <li>
-        Web development
-        <ul>
-          <li>
-            <a href="https://www.smashingmagazine.com/2019/04/z-index-component-based-web-application/">
-              Managing Z-Index In A Component-Based Web Application
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        C for Javascript Developers series
-        (yes, understanding lower-level technologies is fascinating too)
-        <ul>
-          <li>
-            <a href="https://itnext.io/c-for-javascript-developers-program-compilation-source-vs-header-files-1829a69a0a56">
-              Program Compilation. Source vs Header Files
-            </a>
-          </li>
-          <li>
-            <a href="https://itnext.io/c-for-javascript-developers-memory-allocation-pointers-arrays-and-strings-bcf387ad7f44">
-              Memory Allocation. Pointers, Arrays, and Strings
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+  <ul>
+    <li>
+      Web development
+      <ul>
+        <li>
+          <a href="https://www.smashingmagazine.com/2019/04/z-index-component-based-web-application/">
+            Managing Z-Index In A Component-Based Web Application
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      C for Javascript Developers series
+      (yes, understanding lower-level technologies is fascinating too)
+      <ul>
+        <li>
+          <a href="https://itnext.io/c-for-javascript-developers-program-compilation-source-vs-header-files-1829a69a0a56">
+            Program Compilation. Source vs Header Files
+          </a>
+        </li>
+        <li>
+          <a href="https://itnext.io/c-for-javascript-developers-memory-allocation-pointers-arrays-and-strings-bcf387ad7f44">
+            Memory Allocation. Pointers, Arrays, and Strings
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
 
-    <h2 id="contact">
-      <span class="header-content">Contact</span>
-    </h2>
+  <h2 id="contact">
+    <span class="header-content">Contact</span>
+  </h2>
 
-    <ul>
-      <li><a href="https://www.linkedin.com/in/pavel-pomerantsev-854b7b89/">LinkedIn</a></li>
-      <li>Email: <a href="mailto:pomerantsevp@gmail.com">pomerantsevp@gmail.com</a></li>
-    </ul>
+  <ul>
+    <li><a href="https://www.linkedin.com/in/pavel-pomerantsev-854b7b89/">LinkedIn</a></li>
+    <li>Email: <a href="mailto:pomerantsevp@gmail.com">pomerantsevp@gmail.com</a></li>
+  </ul>
 
-  </main>
 {% endblock %}

@@ -23,6 +23,12 @@
     </style>
   </head>
   <body>
-    {% block content %}{% endblock %}
+    <header>
+      <a href="/">Pavel Pomerantsev</a>
+      <a href="/blog">Blog</a>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
   </body>
 </html>
