@@ -186,7 +186,7 @@ html {
 }
 
 main > * + * {
-  margin-top: 1em;
+  margin-block-start: 1em;
 }
 
 body {
@@ -194,23 +194,23 @@ body {
 }
 
 main {
-  width: clamp(20rem, 90vw, 70rem);
-  max-width: 100%;
+  inline-size: clamp(20rem, 90vw, 70rem);
+  max-inline-size: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
 h1 {
-  max-width: 15ch;
+  max-inline-size: 15ch;
 }
 
 h2 {
-  max-width: 25ch;
+  max-inline-size: 25ch;
 }
 
 p,
 li {
-  max-width: 60ch;
+  max-inline-size: 60ch;
 }
 
 
@@ -220,8 +220,8 @@ li {
 img.hero {
   display: block;
   /* Width should be kept in sync with the sizes attr */
-  width: min(40ch, 100%);
-  height: auto;
+  inline-size: min(40ch, 100%);
+  block-size: auto;
   /* Just one of the values picked from the actual image's background */
   background-color: #a0383a;
 }
