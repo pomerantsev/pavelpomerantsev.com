@@ -4,8 +4,8 @@
   "description": "Pavel Pomerantsev's personal website",
   "main": "index.js",
   "scripts": {
-    "build": "./scripts/renderTemplates.js",
-    "start": "http-server -c-1",
+    "build": "node ./scripts/build.mjs",
+    "start": "node ./scripts/build.mjs && (node ./scripts/watch.mjs & http-server -c-1)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

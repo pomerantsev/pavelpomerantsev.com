@@ -263,18 +263,15 @@ not relative (`path/to/file`).
 ### Build process and previewing
 
 HTML files are built with `npm run build`.
-It calls a simple scripts/renderTemplates.js script
+It calls a simple scripts/renderAll.mjs script
 that in turn calls nunjucks to build the HTML.
-For the sake of simplicity,
-I don’t have any directory watching or hot reloading,
-so the script has to be run manually on each HTML change.
 
-As of now, if additional HTML files are introduced,
+If additional HTML files are introduced,
 they need to be manually added to the build script.
 
 To preview the results, I use http-server.
 It’s started with `npm run start`,
-a script that should run in a separate terminal window.
+which also runs the build initially and watches the source directory for any updates and rebuilds on them.
 The website is then available at [http://localhost:8080](http://localhost:8080).
 
 
