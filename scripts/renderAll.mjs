@@ -12,14 +12,14 @@ const processStyle = async () => {
 };
 
 const renderTemplate = async (fileName, style) => {
-  await writeFile(`public/${fileName}`, nunjucks.render(`src/${fileName}`, {style}));
+  await writeFile(`public/${fileName}.html`, nunjucks.render(`src/${fileName}.njk`, {style}));
 };
 
 const renderAll = async () => {
   const style = await processStyle();
   await Promise.all([
-    renderTemplate('index.html', style),
-    renderTemplate('404.html', style),
+    renderTemplate('index', style),
+    renderTemplate('404', style),
   ]);
 };
 
